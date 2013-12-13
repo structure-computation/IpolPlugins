@@ -10,7 +10,9 @@ int main( int argc, char **argv ) {
     if ( not sc.connected() ) return 1;
 
     // type d'item observé
-    sc.reg_type( "IpolLsdItem" );
+    sc.reg_type( "IpolACEItem" );
+    sc.reg_type( "IpolLSDItem" );
+    sc.reg_type( "IpolSCAItem" );
     sc.reg_type( "File" );
     sc.reg_type( "Img" );
     sc.reg_type( "ServerAssistedVisualization" );

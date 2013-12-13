@@ -1,0 +1,7 @@
+DIR_SOURCES_SOCA = -IServerPlugin -IServerPlugin/src  -I../../Soca/src  -IServerPlugin/LMT/include
+
+
+all:
+	make -C ../../Soca
+	cd ServerPlugin/src_ace/ && $(MAKE) -f makefile.gcc ace
+	metil_comp -ne -j1 -O3 -g3 $(DIR_SOURCES_SOCA) -lQtGui ServerPlugin/src/main.cpp

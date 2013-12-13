@@ -15,7 +15,7 @@
 void ImgUpdater::exec( MP mp ) {
     if ( not mp[ "_repr" ].ok() ) {
         QString name( mp[ "src" ] );
-        qDebug() << "updater for " << name;
+        //qDebug() << "updater for " << name;
         char magic_number[ 4 ];
         std::ifstream f( name.toLatin1().data() );
         f.read( magic_number, 4 );

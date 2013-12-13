@@ -36,8 +36,16 @@ class Launcher : public QObject {
           std::string commande;
           int output;
           
-          if(mp.type() == "IpolLsdItem" ){
-              commande = "../IpolLsdPlugin/ServerPlugin/src/compilations/ServerPlugin_src_main_cpp.exe " + temp_str ;
+          if(mp.type() == "IpolLSDItem" ){
+              commande = "../IpolLSDPlugin/ServerPlugin/src/compilations/ServerPlugin_src_main_cpp.exe " + temp_str ;
+              output = std::system(commande.c_str());
+          }
+          else if(mp.type() == "IpolACEItem" ){
+              commande = "../IpolACEPlugin/ServerPlugin/src/compilations/ServerPlugin_src_main_cpp.exe " + temp_str ;
+              output = std::system(commande.c_str());
+          }
+          else if(mp.type() == "IpolSCAItem" ){
+              commande = "../IpolSCAPlugin/ServerPlugin/src/compilations/ServerPlugin_src_main_cpp.exe " + temp_str ;
               output = std::system(commande.c_str());
           }
 
