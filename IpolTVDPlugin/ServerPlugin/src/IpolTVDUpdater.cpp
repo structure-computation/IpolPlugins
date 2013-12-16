@@ -73,7 +73,7 @@ bool IpolTVDUpdater::run( MP mp ) {
             QString tmp_output_name = "TVD_" + name + extension;
             
             std::stringstream commandes;
-            commandes << "../IpolTVDeconvolutionPlugin/ServerPlugin/src_tvdeconvolution/tvdeconv";
+            commandes << "../IpolTVDPlugin/ServerPlugin/src_tvdeconvolution/tvdeconv";
             
             commandes << " lambda:" << (double) mp["lambda.val"];
             
