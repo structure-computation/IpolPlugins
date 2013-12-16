@@ -57,8 +57,8 @@ class Launcher : public QObject {
           //    commande = "../IpolStackMCMPlugin/ServerPlugin/src/compilations/ServerPlugin_src_main_cpp.exe " + temp_str ;
           //    output = std::system(commande.c_str());
           //}
-          else if(mp.type() == "IpolTVDeconvolutionItem" ){
-              commande = "../IpolTVDeconvolutionPlugin/ServerPlugin/src/compilations/ServerPlugin_src_main_cpp.exe " + temp_str ;
+          else if(mp.type() == "IpolTVDItem" ){
+              commande = "../IpolTVDPlugin/ServerPlugin/src/compilations/ServerPlugin_src_main_cpp.exe " + temp_str ;
               output = std::system(commande.c_str());
           }
 
