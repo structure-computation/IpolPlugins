@@ -1,6 +1,6 @@
 #
-class IpolTVDeconvolutionItem extends TreeItem_Computable
-    constructor: ( name = "IpolTVDeconvolution" ) ->
+class IpolTVDItem extends TreeItem_Computable
+    constructor: ( name = "IpolTVD" ) ->
         super()
 
         @add_attr

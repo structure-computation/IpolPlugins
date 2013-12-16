@@ -3,7 +3,7 @@
 #include <QtCore/QBuffer>
 #include <QtGui/QImage>
 
-#include "IpolTVDeconvolutionUpdater.h"
+#include "IpolTVDUpdater.h"
 #include <sstream>
 #include <string.h>
 
@@ -51,7 +51,7 @@ inline void save_img( MP outputImage, const QImage &res ) {
 }
 
 
-bool IpolTVDeconvolutionUpdater::run( MP mp ) {
+bool IpolTVDUpdater::run( MP mp ) {
     MP lst_img = mp[ "_children[ 0 ]._children" ];  // La liste des images
     const int nb_img = lst_img.size();              // Le nombre d'images
     for(int i = 0; i < nb_img; ++i) {

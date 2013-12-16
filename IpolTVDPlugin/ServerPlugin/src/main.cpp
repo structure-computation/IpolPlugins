@@ -1,5 +1,5 @@
 #include <Soca/Com/SodaClient.h>
-#include "IpolTVDeconvolutionUpdater.h"
+#include "IpolTVDUpdater.h"
 
 int main( int argc, char **argv ) {
     // connection
@@ -8,12 +8,12 @@ int main( int argc, char **argv ) {
   
     //id du model à traiter
     quint64 model_id = atoi(argv[1]);
-    sc.reg_type( "IpolTVDeconvolutionItem" );
+    sc.reg_type( "IpolTVDItem" );
     MP mp = sc.load_ptr(model_id);
-    qDebug() << "###############   launch IpolLSDItem ###############" ;
-    IpolTVDeconvolutionUpdater updater;
+    qDebug() << "###############   launch IpolTVDItem ###############" ;
+    IpolTVDUpdater updater;
     updater.sc = &sc;
     updater.exec( mp );
-    qDebug() << "###############   finish IpolLSDItem ###############" ;
+    qDebug() << "###############   finish IpolTVDItem ###############" ;
     
 }
