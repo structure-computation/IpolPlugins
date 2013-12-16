@@ -126,7 +126,7 @@ bool IpolSCAUpdater::run( MP mp ) {
                 new_treeitem(new_img , output_name);
                 new_img["img"] = MP::new_obj("Img");
                 save_img(new_img["img"], output);
-                mp["_output[0]._output"] << new_img;
+                mp["_output[0]._children"] << new_img;
             }
             else {
                 add_message( mp, ET_Error, "Error while running the application" );
