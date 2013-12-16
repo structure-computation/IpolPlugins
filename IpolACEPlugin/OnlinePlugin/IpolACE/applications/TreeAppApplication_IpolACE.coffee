@@ -4,6 +4,7 @@ class TreeAppApplication_IpolACE extends TreeAppApplication
         
         @name = 'Automatic Color Enhancement'
         @powered_with = 'Ipol'
+        @publication_link = 'http://www.ipol.im/pub/art/2012/g-ace/'
 
         _ina = ( app ) =>
             app.data.focus.get() != app.selected_canvas_inst()?[ 0 ]?.cm.view_id

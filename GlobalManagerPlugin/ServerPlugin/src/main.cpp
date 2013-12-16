@@ -11,8 +11,11 @@ int main( int argc, char **argv ) {
 
     // type d'item observé
     sc.reg_type( "IpolACEItem" );
+    //sc.reg_type( "IpolFSTVItem" );
     sc.reg_type( "IpolLSDItem" );
     sc.reg_type( "IpolSCAItem" );
+    //sc.reg_type( "IpolStackMCMItem" );
+    sc.reg_type( "IpolTVDeconvolutionItem" );
     sc.reg_type( "File" );
     sc.reg_type( "Img" );
     sc.reg_type( "ServerAssistedVisualization" );

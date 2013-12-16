@@ -4,6 +4,7 @@ class TreeAppApplication_IpolSCA extends TreeAppApplication
         
         @name = 'Selective Contrast Adjustment'
         @powered_with = 'Ipol'
+        @publication_link = 'http://www.ipol.im/pub/art/2013/41/'
 
         _ina = ( app ) =>
             app.data.focus.get() != app.selected_canvas_inst()?[ 0 ]?.cm.view_id

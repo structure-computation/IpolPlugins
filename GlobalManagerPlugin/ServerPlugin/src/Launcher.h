@@ -44,8 +44,21 @@ class Launcher : public QObject {
               commande = "../IpolACEPlugin/ServerPlugin/src/compilations/ServerPlugin_src_main_cpp.exe " + temp_str ;
               output = std::system(commande.c_str());
           }
+          //else if(mp.type() == "IpolFSTVItem" ){
+          //    commande = "../IpolFSTVPlugin/ServerPlugin/src/compilations/ServerPlugin_src_main_cpp.exe " + temp_str ;
+          //    output = std::system(commande.c_str());
+          //    qDebug() << commande.c_str();
+          //}
           else if(mp.type() == "IpolSCAItem" ){
               commande = "../IpolSCAPlugin/ServerPlugin/src/compilations/ServerPlugin_src_main_cpp.exe " + temp_str ;
+              output = std::system(commande.c_str());
+          }
+          //else if(mp.type() == "IpolStackMCMItem" ){
+          //    commande = "../IpolStackMCMPlugin/ServerPlugin/src/compilations/ServerPlugin_src_main_cpp.exe " + temp_str ;
+          //    output = std::system(commande.c_str());
+          //}
+          else if(mp.type() == "IpolTVDeconvolutionItem" ){
+              commande = "../IpolTVDeconvolutionPlugin/ServerPlugin/src/compilations/ServerPlugin_src_main_cpp.exe " + temp_str ;
               output = std::system(commande.c_str());
           }
 
