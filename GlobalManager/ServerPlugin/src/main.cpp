@@ -15,7 +15,7 @@ int main( int argc, char **argv ) {
     sc.reg_type( "IpolLSDItem" );
     sc.reg_type( "IpolSCAItem" );
     //sc.reg_type( "IpolStackMCMItem" );
-    sc.reg_type( "IpolTVDeconvolutionItem" );
+    sc.reg_type( "IpolTVDItem" );
     sc.reg_type( "File" );
     sc.reg_type( "Img" );
     sc.reg_type( "ServerAssistedVisualization" );
