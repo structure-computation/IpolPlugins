@@ -35,19 +35,20 @@ inline void load_img( MP img, QImage& qimg)
     }
 }
 
-inline void save_img( MP outputImage, const QImage &res ) {
+inline void save_img( MP img, const QImage &qimg ) {
     // -> png
     QByteArray ba;
     QBuffer buffer( &ba );
     buffer.open( QIODevice::WriteOnly );
-    res.save( &buffer, "PNG" );
-
+    qimg.save( &buffer, "PNG" );
+    
     // -> base64
     QByteArray b6;
     b6.append( "data:image/png;base64," );
     b6.append( ba.toBase64() );
-
-    outputImage[ "src" ] = QString::fromAscii( b6.data(), b6.size() );
+    
+    img[ "src" ] = QString::fromAscii( b6.data(), b6.size() );
+    img[ "histo" ] = MP::new_lst();
 }
 
 
