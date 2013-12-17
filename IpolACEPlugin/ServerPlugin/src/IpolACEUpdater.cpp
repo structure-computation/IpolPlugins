@@ -48,7 +48,7 @@ inline void save_img( MP img, const QImage &qimg ) {
     b6.append( ba.toBase64() );
     
     img[ "src" ] = QString::fromAscii( b6.data(), b6.size() );
-    img[ "histo" ] = MP::new_lst();
+    img[ "_histo" ] = MP::new_lst();
 }
 
 
