@@ -19,20 +19,20 @@ void new_treeitem(MP& obj, QString name) {
     obj[ "_allow_vmod" ]      = true;
 }
 
-inline void load_img( MP img, QImage& qimg)
-{
-    QString src = img[ "img.src" ];
-    if(QFile::exists(src)) {
-        qimg.load(src);
-    }
-    else {
-        src.remove(0,22);           // Remove MIME type
-        QByteArray b6;
-        b6.append(src);
-        QByteArray ba = QByteArray::fromBase64(b6);
-        QBuffer bu(&ba);
-        qimg.load(&bu,"PNG");
-    }
+inline void save_img( MP img, const QImage &qimg ) {
+    // -> png
+    QByteArray ba;
+    QBuffer buffer( &ba );
+    buffer.open( QIODevice::WriteOnly );
+    qimg.save( &buffer, "PNG" );
+    
+    // -> base64
+    QByteArray b6;
+    b6.append( "data:image/png;base64," );
+    b6.append( ba.toBase64() );
+    
+    img[ "src" ] = QString::fromAscii( b6.data(), b6.size() );
+    img[ "histo" ] = MP::new_lst();
 }
 
 inline void save_img( MP outputImage, const QImage &res ) {
