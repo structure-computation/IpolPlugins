@@ -108,8 +108,8 @@ bool IpolACEUpdater::run( MP mp ) {
                     return false;
             }
             
-            commandes << " " << tmp_input_name.toStdString();
-            commandes << " " << tmp_output_name.toStdString();
+            commandes << " \"" << tmp_input_name.toStdString()  << "\"";
+            commandes << " \"" << tmp_output_name.toStdString() << "\"";
             std::string cmd = commandes.str();
             int output = std::system(cmd.c_str());
             qDebug() << cmd.c_str();

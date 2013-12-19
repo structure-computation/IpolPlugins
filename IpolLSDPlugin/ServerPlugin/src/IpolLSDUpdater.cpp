@@ -80,8 +80,8 @@ bool IpolLSDUpdater::run( MP mp ) {
             commandes << " -d " << (double) mp["density_th.val"];
             commandes << " -b " << (int)    mp["n_bins.val"];
             commandes << " -W " << (double) mp["width.val"];
-            commandes << " -R " << tmp_output_name.toStdString();
-            commandes << " "    << tmp_input_name.toStdString();
+            commandes << " -R \"" << tmp_output_name.toStdString() << "\"";
+            commandes << "    \"" << tmp_input_name.toStdString()  << "\"";
             commandes << " results.txt";    /// Unused results file
             //commandes << " > log.txt";      /// for error management
             std::string cmd = commandes.str();

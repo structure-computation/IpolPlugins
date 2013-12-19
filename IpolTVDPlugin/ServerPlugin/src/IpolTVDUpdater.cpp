@@ -91,8 +91,8 @@ bool IpolTVDUpdater::run( MP mp ) {
                     return false;
             }
             
-            commandes << " " << tmp_input_name.toStdString();
-            commandes << " " << tmp_output_name.toStdString();
+            commandes << " \"" << tmp_input_name.toStdString()  << "\"";
+            commandes << " \"" << tmp_output_name.toStdString() << "\"";
             //commandes << " > log.txt";      /// for error management
             std::string cmd = commandes.str();
             int output = std::system(cmd.c_str());
