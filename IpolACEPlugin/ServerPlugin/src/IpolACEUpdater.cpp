@@ -92,13 +92,17 @@ bool IpolACEUpdater::run( MP mp ) {
             }
             
             int num_method = mp["method.num"];
+            MP method = mp["method.lst"][num_method];
             switch(num_method) {
                 case 0:
-                    commandes << " -m interp:" << (int) mp["method.lst"][num_method]["_level.val"];
+                    commandes << " -m interp:" << (int) method["_level.val"];
                     break;
                 case 1:
-                    commandes << " -m poly:"   << ((QString) mp["method.lst"][num_method]["_degree.val"]).toStdString();
+                {
+                    int num_poly = method["_degree.num"];
+                    commandes << " -m poly:"   << ((QString) method["_degree.lst"][num_poly]).toStdString();
                     break;
+                }
                 default:
                     add_message( mp, ET_Error, "Invalid method type" );
                     return false;
