@@ -1,8 +1,8 @@
 LIBRARIES = \
-	IploACEPlugin \
-	IploLSDPlugin \
-	IploSCAPlugin \
-	IploTVDPlugin 
+	IpolACEPlugin \
+	IpolLSDPlugin \
+	IpolSCAPlugin \
+	IpolTVDPlugin 
 	
 SHELL = /bin/bash
 	
